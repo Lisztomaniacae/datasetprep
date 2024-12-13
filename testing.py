@@ -82,4 +82,4 @@ def test(detail):
         plt.show()
 
 if(__name__ == "__main__"):
-    test(0)
+    test(15)
