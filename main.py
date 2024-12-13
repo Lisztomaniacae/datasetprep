@@ -245,7 +245,7 @@ class DatasetCreatorApp:
         os.makedirs(save_folder)
 
         # Number of elements and range
-        num_elements = 10
+        num_elements = 20
         range_start = -np.pi
         range_end = np.pi
 
@@ -253,7 +253,7 @@ class DatasetCreatorApp:
         radians = np.linspace(range_start, range_end, num_elements)
 
         # Add random noise to each value within (-pi/12, pi/12)
-        noise_range = np.pi / 10
+        noise_range = np.pi / 20
         random_noise = np.random.uniform(-noise_range, noise_range, num_elements)
 
         radians_with_noise = radians + random_noise
