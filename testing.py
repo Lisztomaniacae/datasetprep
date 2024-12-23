@@ -50,8 +50,8 @@ def load_parameters(csv_file):
 def test(detail):
     test_folder = ("dataset/" + str(detail))
     for folder in sorted(os.listdir(test_folder)):
-        #if not folder.startswith("normal"):
-        #    continue
+        if not folder.startswith("normal0"):
+            continue
 
         folder_path = os.path.join(test_folder, folder)
         if not os.path.isdir(folder_path):
@@ -82,4 +82,5 @@ def test(detail):
         plt.show()
 
 if(__name__ == "__main__"):
-    test(0)
+    for i in range(84):
+        test(i)
