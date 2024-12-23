@@ -308,11 +308,11 @@ class DatasetCreatorApp:
         self.gripper_image = Image.open(GRIPPER_IMAGE_PATH).convert("RGBA")
 
         # Load machined part images
-        self.machined_parts = [
+        self.machined_parts = sorted([
             os.path.join(MACHINED_PARTS_FOLDER, f)
             for f in os.listdir(MACHINED_PARTS_FOLDER)
             if f.lower().endswith(".png")
-        ]
+        ])
 
         if not self.machined_parts:
             raise FileNotFoundError("No machined part images found in the specified folder!")
